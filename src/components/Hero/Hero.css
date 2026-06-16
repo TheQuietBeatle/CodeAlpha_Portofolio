@@ -1,0 +1,104 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3498db;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.hero-card {
+  width: min(340px, 90vw);
+  min-height: 300px;
+  height: auto;
+  background: #f5f5f5;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  transition: box-shadow .3s ease, transform .2s ease;
+}
+
+.hero-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.hero-card-avatar {
+  --size: 60px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform .2s ease;
+  margin-bottom: 1rem;
+}
+
+.hero-card-title {
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.hero-card-subtitle {
+  color: #859ba8;
+  font-size: 0.8em;
+}
+
+.hero-card-social {
+  transform: translateY(200%);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.hero-card-social__item {
+  list-style: none;
+}
+
+.hero-card-social__item a {
+  display: block;
+}
+
+.hero-card-social__item svg {
+  display: block;
+  height: 30px;
+  width: 30px;
+  fill: #515F65;
+  cursor: pointer;
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.hero-card-social__item svg:hover {
+  fill: #232323;
+  transform: scale(1.1);
+}
+
+.hero-card:hover {
+  box-shadow: 0 8px 50px #23232333;
+}
+
+.hero-card:hover .hero-card-info {
+  transform: translateY(-5%);
+}
+
+.hero-card:hover .hero-card-social {
+  transform: translateY(100%);
+  opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-card-avatar:hover {
+    transform: scale(2.5);
+  }
+}
+p{
+  font-size: small;
+}

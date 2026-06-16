@@ -1,0 +1,119 @@
+.projects { padding: 2rem; background: #f4f4f4; }
+.projects-title { text-align: center; margin-bottom: 2rem; color: black; }
+
+.project-card { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.card-header { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.card-header h3 { margin: 0; }
+.card-header h4 { display: flex; align-items: center; gap: 0.5rem; }
+.company-logo { height: 1.5rem; width: auto; vertical-align: middle; border-radius: 4px; }
+.source-btn { display: flex; align-items: center; gap: 0.4rem; border: none; background: none; padding: 0; cursor: pointer; flex-shrink: 0; font-size: 0.9rem; color: #333; }
+.source-icon { width: 1.5rem; height: 1.5rem; fill: #333; display: block; transition: fill 0.2s ease, transform 0.2s ease; }
+.source-btn:hover .source-icon { fill: #000; transform: scale(1.15); }
+.see-more { display: flex; justify-content: flex-end; margin-top: 1rem; }
+p{
+    text-align:justify;
+    color: black;
+    margin: 5px;
+}
+
+.experience-section {
+  background: #f4f4f4;
+  padding: 2rem;
+
+}
+
+h3{
+  font-size: larger
+}
+
+.certificate-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.slider-viewport {
+  width: 50%;
+  max-width: 50%;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e9e9e9;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.45s ease;
+}
+
+.slider-slide {
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .slider-viewport {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.slider-arrow {
+  flex-shrink: 0;
+  border: none;
+  background: #2c3e50;
+  color: white;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slider-arrow:hover {
+  background: #1a2530;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.slider-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider-dot--active {
+  background: #2c3e50;
+}
+
+@media (max-width: 480px) {
+  .slider-arrow {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+

@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 32px;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+.col-4 {
+  flex: 1 1 200px;
+}
