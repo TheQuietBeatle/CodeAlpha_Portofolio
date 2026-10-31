@@ -8,25 +8,14 @@ const Hero = () => {
         <div className="hero-card-info">
           <img
             src="./WhatsApp Image 2026-06-16 at 3.30.30 PM.jpeg"
-            alt="George Sameh Kasdy"
+            alt="George Sameh Kasdy Hanna"
             className="hero-card-avatar"
-            
+
           />
-          <div className="hero-card-title">George Sameh Kasdy</div>
-          <div className="hero-card-subtitle">Aspiring Web Developer</div>
+          <div className="hero-card-title">George Sameh Kasdy Hanna</div>
+          <div className="hero-card-subtitle">Junior Software Engineer | Full Stack Developer | LLM &amp; Automation Projects</div>
           <div>
-       <p> Frontend developer with hands-on experience building
-REST API-
-connected,
-responsive
-web applications in
-React
-and
-JavaScript (ES6+)
-. Holds the Meta Front-End Developer Professional Certificate and an AZ-900 cloud credential. Currently completing a
-B.Sc
-⁠
-. in Computer Engineering at GUC while shipping real projects — details and live links below. </p>
+       <p>Full Stack developer with hands-on experience building REST API-connected, responsive web applications in React and JavaScript (ES6+). Holds the Meta Front-End Developer Professional Certificate and an AZ-900 cloud credential. Currently completing a B.Sc. in Computer Engineering at GUC while shipping real projects — details below.</p>
       </div>
         </div>
         <ul className="hero-card-social">

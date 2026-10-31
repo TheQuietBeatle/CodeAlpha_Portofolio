@@ -87,6 +87,16 @@ h3{
   background: #1a2530;
 }
 
+.slider-caption {
+  text-align: center;
+  margin: 1rem 0 0;
+}
+
+.slider-note {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .slider-dots {
   display: flex;
   justify-content: center;

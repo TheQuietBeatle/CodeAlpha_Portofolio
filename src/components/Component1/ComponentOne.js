@@ -1,50 +1,49 @@
     import React from 'react';
     import './ComponentOne.css';
+
+    const skills = [
+        {
+            category: 'Frontend:',
+            items: ['React', 'TypeScript', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material UI', 'Bootstrap', 'Responsive Design'],
+        },
+        {
+            category: 'Backend & Data:',
+            items: ['Node.js', 'Express (middleware, CORS)', 'REST API design', 'JWT', 'ASP.NET Core', 'C#', 'PostgreSQL', 'SQL Server', 'MongoDB'],
+        },
+        {
+            category: 'Languages & Testing:',
+            items: ['Java', 'Python (NumPy / SciPy)', 'C++', 'Jest', 'JUnit'],
+        },
+        {
+            category: 'Tools & Cloud:',
+            items: ['Git', 'GitHub', 'GitHub Copilot', 'VS Code', 'IntelliJ', 'Docker (basic)', 'Microsoft Azure (VMs, Networking)', 'Intune', 'Active Directory'],
+        },
+        {
+            category: 'AI & Automation:',
+            items: ['Prompt engineering', 'AI-assisted development (Claude Code)', 'LLM integration (Groq / Llama)', 'n8n', 'Gmail API', 'OAuth2', 'Telegram Bot API'],
+        },
+        {
+            category: 'Spoken Languages:',
+            items: ['Arabic (Native)', 'English (Fluent)', 'German (Intermediate)'],
+        },
+    ];
+
     const ComponentOne = () => {
         return (
-            <div class =  "width:80% ,   border : 10 px solid black">
+            <div className='skills-section'>
                 <div className='row'>
                     <h1 className='col-12'>TECHNICAL SKILLS</h1>
-                    <ul className='col-4'>    
-                        <li>Frontend:</li>
-                        <ul className='col-4'>
-                        <li>React</li>  
-                        <li>JavaScript (ES6+)</li>  
-                        <li>HTML5</li>  
-                        <li>CSS3</li>  
-                        <li>Tailwind</li>  
-                        <li>Bootstrap</li>  
-                        <li>Responsive Design</li>  
+                    {skills.map((group) => (
+                        <ul className='col-4' key={group.category}>
+                            <li>{group.category}
+                                <ul>
+                                    {group.items.map((item) => (
+                                        <li key={item}>{item}</li>
+                                    ))}
+                                </ul>
+                            </li>
                         </ul>
-                    </ul>
-                    <ul className='col-4'>    
-                        <li>APIs & Data:</li>
-                        <ul className='col-4'>
-                        <li> REST APIs</li>
-                            <li>MongoDB</li> 
-                            <li>SQL Server</li> 
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </ul>
-                    <ul className='col-4'>    
-                        <li>Backend:</li>
-                        <ul className='col-4'>
-                        <li>ASP.NET Core</li>
-                            <li>C#</li> 
-                            <li>Node.js (basic)</li> 
-                        </ul>
-                    </ul>
-                    <ul className='col-4'>    
-                        <li>Tools:</li>
-                        <ul className='col-4'>
-                        <li>Git</li>
-                        <li>GitHub </li>
-                        <li>GitHub Copilot</li>
-                        <li>VS Code</li>
-                        <li>IntelliJ</li>
-                        <li>Docker (basic)</li>
-                        </ul>
-                    </ul>
+                    ))}
                 </div>
         </div>
 

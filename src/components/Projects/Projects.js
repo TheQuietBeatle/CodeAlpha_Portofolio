@@ -7,67 +7,111 @@ const GithubIcon = (props) => (
   </svg>
 );
 
+const projects = [
+  {
+    name: 'NurseryLink',
+    stack: 'React 19 · TypeScript · Tailwind CSS · Express 5 · PostgreSQL · Resend',
+    description: [
+      'A full-stack nursery management web app where teachers log daily care events and parents follow their child’s day from home, with parent, teacher and admin portals across 12 routes and 38 React components.',
+      'Automated fever alerts: any reading of 38.0 °C or above emails every linked parent through Resend and sends an in-app notification in one transaction.',
+    ],
+  },
+  {
+    name: 'GUC Talent Marketplace (Power-Puff)',
+    stack: 'React 19 · Vite · JavaScript (ES6+) · Material UI · Framer Motion · Context API · Team of 4',
+    repo: 'https://github.com/Software-Engineering-Spring-2026/Power-Puff.git',
+    description: [
+      'A role-gated SPA built for the German University in Cairo that connects students, employers and instructors across 28+ routes, with an admin review pipeline and platform-wide analytics.',
+      'Built on a layered Context API architecture, with a 6-stage invitation lifecycle, a drag-and-drop Kanban board, custom SVG analytics charts and memoised multi-field search, using Git feature branches, pull requests and Scrum sprints.',
+    ],
+  },
+  {
+    name: 'CinePulse (Movie Explorer)',
+    stack: 'React 19 · TypeScript · Tailwind CSS · Firebase',
+    description: [
+      'A movie explorer and cloud-synced watchlist on an MVVM architecture, with debounced OMDB search, filters and pagination, Firebase Auth and Realtime Database, a protected route and an offline mock-data fallback.',
+    ],
+  },
+  {
+    name: 'Smart Home Dashboard',
+    stack: 'React 19 · TypeScript · Vite · Tailwind CSS',
+    description: [
+      'A touch-first wall-tablet dashboard with 10 rearrangeable widgets on a swipeable 12-column grid, a mock-data mode and optional two-way Home Assistant sync.',
+    ],
+  },
+  {
+    name: 'Accessible Components Playground',
+    stack: 'React · TypeScript · Vite · Tailwind CSS · Radix UI',
+    description: [
+      'Three accessible components built from scratch (modal dialog, tabs, disclosure) following W3C ARIA authoring guidance, and compared against shadcn/ui equivalents.',
+    ],
+  },
+  {
+    name: 'Inbox Reply Monitor (AI Automation)',
+    stack: 'n8n · Gmail API · Groq (Llama 3.3) · Docker',
+    description: [
+      'A containerized pipeline that polls Gmail every 5 minutes and uses Llama 3.3 to classify mail (interview invite, reply, rejection, irrelevant), pushing color-coded alerts to Telegram.',
+    ],
+  },
+  {
+    name: 'University HR Management System',
+    stack: 'ASP.NET Core · C# · SQL Server',
+    description: [
+      'A full-stack HR portal with RESTful APIs, multi-level approval workflows and payroll automated through SQL stored procedures and triggers.',
+    ],
+  },
+  {
+    name: 'Airline Booking Web App',
+    stack: 'JavaScript · MongoDB',
+    description: ['REST-backed flight search with dynamic seat-class pricing.'],
+  },
+  {
+    name: 'Jackaroo Board Game Engine',
+    stack: 'Java · JUnit',
+    description: ['A board game engine with a rule test suite, using the Strategy pattern.'],
+  },
+  {
+    name: 'Cassette Retro Music Player',
+    stack: 'HTML5 · CSS3 · JavaScript',
+    description: ['A retro player with animated reels synced to playback, online search and custom playlists.'],
+  },
+  {
+    name: 'Travel Website',
+    stack: 'Express · EJS · MongoDB · express-session',
+    description: ['A server-rendered travel site with session handling.'],
+  },
+];
+
 const Projects = () => {
   return (
     <section className="projects">
       <h2 className="projects-title">My Work</h2>
       <div className="project-grid">
-        <div className="project-card">
-          <div className="card-header">
-            <h3>GUC Talent Marketplace</h3>
-            <button
-              className="source-btn"
-              onClick={() => window.open('https://github.com/Software-Engineering-Spring-2026/Power-Puff.git', '_blank', 'noopener,noreferrer')}
-              aria-label="View on GitHub"
-            >
-              <GithubIcon className="source-icon" />
-            </button>
+        {projects.map((project) => (
+          <div className="project-card" key={project.name}>
+            <div className="card-header">
+              <h3>{project.name}</h3>
+              {project.repo && (
+                <button
+                  className="source-btn"
+                  onClick={() => window.open(project.repo, '_blank', 'noopener,noreferrer')}
+                  aria-label="View on GitHub"
+                >
+                  <GithubIcon className="source-icon" />
+                </button>
+              )}
+            </div>
+            <h4>{project.stack}</h4>
+            {project.description.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
           </div>
-
-          <h4>React 19 · Vite · JavaScript (ES6+) · Material UI · Framer Motion · Context API Team of 4 ·
-            CSEN603 Software Engineering</h4>
-          <p>A role-gated single-page application built for
-            the German University in Cairo that connects students,
-            employers, and instructors in one platform.
-            The app serves four distinct user personas across 28+ routes
-            — students browse internships and collaborate on projects,
-            employers post opportunities and get verified through an
-            admin review pipeline, instructors manage bachelor thesis submissions
-            , and admins monitor platform-wide analytics.Collaborated in Agile/ Scrum team:
-            sprint planning, standups, retrospectives, PR reviews
-            The technical core is a layered Context API architecture with three custom providers
-            handling auth, notifications, and invitations. Features include a drag-and-drop
-            Kanban task board, a full invitation lifecycle with six status transitions,
-            custom SVG analytics charts, and a memoisation-optimised multi-field search.
-            Built collaboratively using Git feature branches, pull requests,
-            and Scrum sprints across the full SDLC.</p>
-        </div>
-        <div className="project-card">
-          <h3>Airline Booking Web Applicatoin</h3>
-          <h4>ReactHTML5 · CSS3 · JavaScript (ES6+) · MongoDB</h4>
-          <p>Built a mobile-first,responsive booking interface using semantic HTML5 and CSS3 Grid/ Flexbox, optimised for conversion efficiency across devices.
-          </p>
-          <p>Integrated a REST API -backed flight-search endpoint returning real-time results; designed a MongoDB document schema supporting dynamic seat-class pricing without schema migrations.
-          </p>
-        </div>
-        <div className="project-card">
-          <h3>University HR Management System</h3>
-          <h4>ASP.NET Core · JavaScript (ES6+) · SQL</h4>
-          <p>
-            Delivered a full-stack HR portal — ASP.NET Core backend exposing RESTful API endpoints
-            consumed by a JavaScript (ES6+) frontend — supporting multi-level approval workflows
-            and complex organisational hierarchies.
-          </p>
-          <p>
-            Automated payroll processing with SQL Stored Procedures and Triggers, integrating
-            overtime and attendance logic with 100% data-integrity on constraint testing.
-          </p>
-        </div>
+        ))}
       </div>
       <div className="see-more">
         <button
           className="source-btn"
-          onClick={() => window.open('https://github.com/THEbeatles1970', '_blank', 'noopener,noreferrer')}
+          onClick={() => window.open('https://github.com/TheQuietBeatle', '_blank', 'noopener,noreferrer')}
           aria-label="See more on GitHub"
         >
          
